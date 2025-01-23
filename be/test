@@ -1,0 +1,8 @@
+gcloud auth login
+gcloud services enable run.googleapis.com
+
+gcloud builds submit --tag gcr.io/voltaic-battery-447511-p5/sample-api
+
+gcloud run deploy sample-api --image gcr.io/voltaic-battery-447511-p5/sample-api --platform managed --region us-central1 --allow-unauthenticated
+
+https://sample-api-855220130399.us-central1.run.app/
