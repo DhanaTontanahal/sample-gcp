@@ -6,3 +6,5 @@ gcloud builds submit --tag gcr.io/voltaic-battery-447511-p5/sample-api
 gcloud run deploy sample-api --image gcr.io/voltaic-battery-447511-p5/sample-api --platform managed --region us-central1 --allow-unauthenticated
 
 https://sample-api-855220130399.us-central1.run.app/
+
+docker exec -it mysql-container mysqldump -u root -p menu_logger > C:\Work\projects\Lloyds-Demo\menu_logger.sql
